@@ -3,6 +3,7 @@
 const REGISTER_USER = 'REGISTER_USER',
 	  LOGIN = 'LOGIN',
 	  LOGOUT = 'LOGOUT',
+		DEPOSIT = 'DEPOSIT',
 	  BALANCE = 'BALANCE',
 	  WITHDRAW = 'WITHDRAW',
 	  TRANSFERFUNDS = 'TRANSFERFUNDS'
@@ -22,12 +23,15 @@ function actionLogin(login, password) {
 function actionLogout() {
 	return { type: LOGOUT }
 }
-function actionBallance(text) {
-	return { type: BALANCE, text }
+function actionBallance(balance) {
+	return { type: BALANCE, balance }
 }
-function actionWithdraw(text) {
-	return { type: WITHDRAW, text }
+function actionDeposit(deposit) {
+	return { type: DEPOSIT, deposit }
 }
-function actionTransfer(text) {
-	return { type: TRANSFERFUNDS, text }
+function actionWithdraw(withdraw) {
+	return { type: WITHDRAW, withdraw }
+}
+function actionTransfer(transfer) {
+	return { type: TRANSFERFUNDS, transfer }
 }

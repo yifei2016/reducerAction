@@ -2,9 +2,10 @@
 let initialState = {
 	login: null,
 	userView: 'register-page',  // register, login, main, search
-	balance: null,
-	withdraw: '',
-  transferFunds:''
+	//deposit: null,
+	balance: 0
+	//withdraw: '',
+  //transferFunds:''
 }
 // const store = createStore(rootReducer);
 // store.dispatch( actionRegisterUser(1, 2, 3) )
@@ -12,10 +13,28 @@ let initialState = {
 function rootReducer(state = initialState, action) {
 	switch( action.type ) {
 		case REGISTER_USER:
-			let newstate = Object.assign({}, state);
-			newstate.login = action.login;
-			return newstate;
+		  let newstate = Object.assign({}, state);
+		  newstate.login = action.login;
+		  return newstate;
 		case LOGIN:
-			// TODO
+		  let newstate = Object.assign({}, state);
+		  newstate.login = action.login;
+		  return newstate;
+		case LOGOUT:
+		  let newstate = Object.assign({},state);
+			newstate.login = null;
+			return newstate;
+		case DEPOSIT:
+		  let newstate = Object.assign({},state);
+			newstate.balance = action.deposit;
+		case BALANCE:
+			  let newstate = Object.assign({},state);
+				newstate.balance = action.balance;
+		case WITHDRAW:
+				let newstate = Object.assign({},state);
+				newstate.balance = action.withdraw;
+		case TRANSFERFUNDS:
+				let newstate = Object.assign({},state);
+				newstate.balance = action.transfer;
+			}
 	}
-}
