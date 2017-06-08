@@ -35,3 +35,5 @@ function actionWithdraw(withdraw) {
 function actionTransfer(transfer) {
 	return { type: TRANSFERFUNDS, transfer }
 }
+
+export { REGISTER_USER, actionRegisterUser,LOGIN,actionLogin,LOGOUT,actionLogout,BALANCE,actionBallance,DEPOSIT,actionDeposit,WITHDRAW,actionWithdraw,TRANSFERFUNDS,actionTransfer};

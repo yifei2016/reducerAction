@@ -1,4 +1,9 @@
 //balance, deposit, withdraw, transferFunds (red)
+import {REGISTER_USER, actionRegisterUser,
+	LOGIN,actionLogin,LOGOUT,actionLogout,
+	BALANCE,actionBallance,DEPOSIT,actionDeposit,
+WITHDRAW,actionWithdraw,TRANSFERFUNDS,actionTransfer} from './reducer.js';
+
 let initialState = {
 	login: null,
 	userView: 'register-page',  // register, login, main, search
@@ -38,3 +43,4 @@ function rootReducer(state = initialState, action) {
 				newstate.balance = action.transfer;
 			}
 	}
+export defalut rootReducer;
